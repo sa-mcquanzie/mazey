@@ -1,0 +1,17 @@
+{
+  "name": "mazey2",
+  "version": "1.0.0",
+  "description": "p5 maze game experiment version 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "S.A. McQuanzie",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "image-size": "^0.9.3",
+    "pluralize": "^8.0.0",
+    "tmx-parser": "^1.5.0"
+  }
+}

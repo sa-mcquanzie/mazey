@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+body {
+	margin: 0;
+	background-color:rgb(44, 32, 40);
+	font-family: 'Titillium Web', sans-serif;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+#canvasContainer {
+	position: relative;
+	top: 0;
+}
+
+#rightPanel {
+	position: absolute;
+	top: 16px;
+	left: 800px;
+	width: 384px;
+	height: 656px;
+	color: #ffffff;
+	outline-width: 1px;
+	outline-style: dotted;
+	outline-color: silver;
+}
+
+#addressLine {
+	text-align: center;
+}
+
+#cellItemList {
+	text-align: left;
+}
+
+.itemList ul {
+	list-style-type: none;
+	padding-left: 16px;
+}
+
+.itemList lh {
+	color: teal;
+}
+
+.itemList li:hover {
+	color: yellowgreen;
+	cursor: zoom-in;
+}
+
+.itemList.grabbable li:hover {
+	cursor: crosshair;
+}
+
+.itemList li p {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-style: italic;
+	cursor: auto;
+}
+
+#locationDescription {
+	padding-left: 16px
+}
+
+p.addressText {
+	font-weight: 600;
+}
+

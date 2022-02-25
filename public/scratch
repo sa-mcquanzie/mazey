@@ -1,0 +1,78 @@
+		function dfsRecursive(cell) {
+			if (cell == undefined) {
+				console.log("done")
+				return
+			}
+
+			cell.visited = true
+			let unvisitedNeighbours = Object.values(cell.neighbours).filter(c => (c && (c.visited == false)))
+
+			if (unvisitedNeighbours == []) {
+				console.log("done")
+				return "done"
+			}
+
+			let nextCell = sample(unvisitedNeighbours)
+			if (nextCell == undefined) {
+				console.log("done")
+				return
+			}
+
+			switch(true) {
+			case nextCell == cell.neighbours.north:
+				cell.removeWall("north")
+				nextCell.removeWall("south")
+				break
+			case nextCell == cell.neighbours.east:
+				cell.removeWall("east")
+				nextCell.removeWall("west")
+				break
+			case nextCell == cell.neighbours.south:
+				cell.removeWall("south")
+				nextCell.removeWall("north")
+				break
+			case nextCell == cell.neighbours.west:
+				cell.removeWall("west")
+				nextCell.removeWall("east")			
+			}
+			dfs(nextCell)
+		}
+
+		// dfsRecursive(sample(this.cells))
+
+
+			// roadE = loadImage('images/paths/road_e.png');
+	// roadN = loadImage('images/paths/road_n.png');
+	// roadS = loadImage('images/paths/road_s.png');
+	// roadW = loadImage('images/paths/road_w.png');
+	// roadES = loadImage('images/paths/road_es.png');
+	// roadESW = loadImage('images/paths/road_esw.png');
+	// roadEW = loadImage('images/paths/road_ew.png');
+	// roadNE = loadImage('images/paths/road_ne.png');
+	// roadNES = loadImage('images/paths/road_nes.png');
+	// roadNESW = loadImage('images/paths/road_nesw.png');
+	// roadNEW = loadImage('images/paths/road_new.png');
+	// roadNS = loadImage('images/paths/road_ns.png');
+	// roadNSW = loadImage('images/paths/road_nsw.png');
+	// roadNW = loadImage('images/paths/road_nw.png');
+	// roadSW = loadImage('images/paths/road_sw.png');
+	// roadSE = loadImage('images/paths/road_se.png');
+	// roadS = 
+	// roadW = 
+	// roadES = 
+	// roadESW = 
+	// roadEW = 
+	// roadNE = 
+	// roadNES = 
+	// roadNESW = 
+	// roadNEW = 
+	// roadNS = 
+	// roadNSW = 
+	// roadNW = 
+	// roadSW = 
+	// roadSE =
+
+	// roadE = new Sprite(spritesheet, [13, 7])
+	// roadN = new Sprite(spritesheet, [12, 6])
+	// roadS = new Sprite(spritesheet, [12, 7])
+	// roadW = new Sprite(spritesheet, [13, 6])
